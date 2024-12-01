@@ -1,0 +1,162 @@
+body {
+	--bg-color: #153448;
+	--text-color: #ffffff;
+}
+
+/* Presentation */
+.presentation-title svg path {
+	fill: transparent;
+	stroke: #ffffff;
+	stroke-width: 0.1;
+	stroke-dasharray: 100;
+	stroke-dashoffset: 100;
+}
+
+.presentation-content {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+}
+
+.presentation-scroll {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+}
+
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+.presentation-scroll .dashes-arrow .dash,
+.presentation-scroll .dashes-arrow .arrow {
+	opacity: 0;
+	animation: fadeIn 2s forwards infinite;
+}
+
+
+/* History */
+#cards {
+	--card-height: 40vw;
+	--card-margin: 4vw;
+	--card-top-offset: 1em;
+	--numcards: 4;
+
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--card-margin);
+}
+
+.card {
+	position: sticky;
+	top: 10vh;
+	padding-top: 20px;
+	box-shadow: 0 14px 20px -4px #0f151f;
+}
+
+.card-content {
+	box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+	background: rgb(255, 255, 255);
+	color: rgb(10, 5, 7);
+	border-radius: 1em;
+	overflow: hidden;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+
+	align-items: stretch;
+}
+
+.card-text {
+	width: 80%;
+	place-self: center;
+	text-align: left;
+
+	display: grid;
+	gap: 1em;
+	place-items: start;
+}
+
+.card-img {
+	margin: 0;
+	overflow: hidden;
+	height: 500px;
+}
+
+.card-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Valeurs */
+/* ref : https://www.youtube.com/watch?v=iLmBy-HKIAw&t=80s */
+
+.valeurs {
+	display: grid;
+	min-block-size: 100vh;
+	place-content: center;
+	font-family: Helvetica;
+	font-size: 2rem;
+	padding: 0;
+}
+
+.tag-list {
+	margin: 0;
+	padding-inline: 0;
+	list-style: none;
+}
+
+.tag-list li {
+	padding: 2rem;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+.scroller {
+	overflow: hidden;
+}
+
+.scroller__inner {
+	padding-block: 1rem;
+	display: flex;
+	gap: var(--scroller-gap, 1rem);
+	width: max-content;
+	flex-wrap: nowrap;
+	animation: scroll var(--scroller-animation-duration, 10s) var(--scroller-animation-direction, normal) linear infinite;
+}
+
+@keyframes scroll {
+	to {
+		transform: translate(calc(-50% - (var(--scroller-gap, 1rem) * 0.5)));
+	}
+}
+
+.scroller__inner img {
+	width: 300px;
+	height: 500px;
+	object-fit: cover;
+	border-radius: 2%;
+	box-shadow: 0 0.5rem 1rem -0.25rem #0f151f;
+}
+
+.scroller-1 {
+	--scroller-animation-duration: 20s;
+	--scroller-animation-direction: normal;
+}
+.scroller-2 {
+	--scroller-animation-duration: 30s;
+	--scroller-animation-direction: reverse;
+}
+
+

@@ -1,0 +1,296 @@
+
+/* Header */
+
+
+/* Presentation */
+
+.presentation {
+	height: 100vh;
+	padding: 5rem;
+	background: linear-gradient(170deg, #095671, #000000 59%);
+	color: #ffffff;
+}
+
+@media(max-width: 768px) {
+	.presentation {
+		padding: 3rem;
+	}
+}
+
+.presentation-content {
+	position: relative;
+	height: 100%;
+
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+}
+
+@media(max-width: 768px) {
+	.presentation-content {
+		grid-template-columns: 1fr;
+	}
+}
+
+.presentation-text {
+	min-width: 0;
+	z-index: 1;
+	font-size: clamp(2rem, 5vw, 3rem);
+	color: #e6e1f4;
+}
+
+.presentation-title {
+	font-size: clamp(3rem, 12vw, 8rem);
+	margin: 0;
+	margin-top: 20vh;
+}
+
+.presentation-img {
+	height: 100%;
+	width: 100%;
+}
+
+.presentation-img-wrap {
+	position: absolute;
+	right: 0;
+	bottom: 10%;
+	width: 75%;
+	overflow: hidden;
+	box-shadow: -55px -33px 98px rgb(97 55 210 / 66%);
+}
+
+.presentation-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Slider Sections */
+
+.slider-section {
+	padding: 4rem 2rem;
+	background-color: rgb(var(--slider-section-color-bg));
+	color: var(--slider-section-color);
+}
+
+.slider-section-title {
+	margin: 0 0 3rem 0;
+	font-size: clamp(2rem, 5vw, 5rem);
+}
+
+.slider-section-content {
+	--swiper-theme-color: #111111;
+	--swiper-navigation-size: 20px;
+	position: relative;
+}
+
+.slider-section-content:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(90deg, rgba(var(--slider-section-color-bg), 1) 25%, rgba(var(--slider-section-color-bg), 0.84) 65%, rgba(var(--slider-section-color-bg), 0.45) 90%, transparent);
+}
+
+.slider-section-content-img {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 75%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.slider-section-content .swiper {
+	--swiper-pagination-bullet-inactive-opacity: 1;
+	--swiper-pagination-bullet-size: 10px;
+	--swiper-pagination-bullet-border-radius: 5px;
+	--swiper-pagination-bottom: 15px;
+	width: 100%;
+	min-height: 50vh;
+	display: flex;
+	align-items: center;
+}
+
+.slider-section-content .swiper-wrapper {
+	align-items: center;
+}
+
+.slide-content {
+	height: 100%;
+	width: 75%;
+	padding: 3rem;
+}
+
+
+
+@media(max-width: 768px) {
+	.slide-content {
+		width: 100%;
+		padding: 1rem;
+	}
+}
+
+.slide-content-text{
+	font-size: clamp(1rem, 1.10vw, 5rem);
+}
+
+.slide-content-title {
+	font-size: 2rem;
+}
+
+.slider-section-content .swiper .swiper-pagination-bullet {
+	transition: width 300ms;
+}
+
+.slider-section-content .swiper .swiper-pagination-bullet-active {
+	width: 60px;
+}
+
+.prevnext {
+	position: absolute;
+	inset: 0;
+	z-index: 10;
+	pointer-events: none;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	gap: 5px;
+	padding: 15px;
+	margin: 0;
+}
+
+.prev,
+.next {
+	cursor: pointer;
+	pointer-events: all;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 0;
+	border-radius: 50%;
+	color: var(--prevnext-color, #ffffff);
+	background-color: var(--prevnext-bg-color, #111111);
+}
+
+.prev svg,
+.next svg {
+	width: 30px;
+	height: 30px;
+	fill: currentColor;
+}
+
+.prev {
+	transform: scaleX(-1);
+}
+
+/* Arts Plastiques */
+
+.arts-plastiques {
+	--slider-section-color-bg: 239, 229, 220;
+	--slider-section-color: #111111;
+	--swiper-pagination-color: #111111;
+}
+
+.cinema {
+	--slider-section-color-bg:243, 216, 199;
+	--slider-section-color: #111111;
+	--swiper-pagination-color: #1a1515;
+}
+
+.hlp {
+	--slider-section-color-bg: 239, 229, 220;
+	--slider-section-color: #111111;
+	--swiper-pagination-color: #111111;
+}
+
+.amc {
+	--slider-section-color-bg: 243, 216, 199;
+	--slider-section-color: #111111;
+	--swiper-pagination-color: #111111;
+}
+
+.histoire {
+	--slider-section-color-bg: 239, 229, 220 ;
+	--slider-section-color: #111111;
+	--swiper-pagination-color: #111111;
+}
+
+.maths {
+	--slider-section-color-bg: 243, 216, 199;
+	--slider-section-color: #111111;
+	--swiper-pagination-color: #111111;
+}
+
+.ses {
+	--slider-section-color-bg: 239, 229, 220;
+	--slider-section-color: #111111;
+	--swiper-pagination-color: #111111;
+}
+
+.pc {
+	--slider-section-color-bg: 243, 216, 199;
+	--slider-section-color: #111111;
+	--swiper-pagination-color: #111111;
+}
+
+.svt {
+	--slider-section-color-bg: 239, 229, 220;
+	--slider-section-color: #111111;
+	--swiper-pagination-color: #111111;
+}
+
+
+.nsi {
+	--slider-section-color-bg: 0, 0, 0;
+	--slider-section-color: #f9e8e8;
+	--swiper-pagination-color: #f9e8e8;
+	--swiper-pagination-bullet-inactive-color: #f9e8e8;
+	--prevnext-bg-color: #f9e8e8;
+	--prevnext-color: #111111;
+}
+
+.nsi .slider-section-title .cyberpunk {
+	display: inline-block;
+	animation-name: cyberpunk;
+	animation-timing-function: step-end;
+	animation-delay: 0s;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+@keyframes cyberpunk {
+	0% { 
+		clip-path: polygon(96% 81%, 23% 67%, 3% 70%, 81% 58%, 63% 65%, 71% 18%, 60% 85%, 22% 27%, 26% 25%, 60% 53%, 79% 62%, 61% 6%, 8% 1%, 12% 81%, 12% 21%, 75% 7%, 31% 61%, 69% 79%, 41% 46%, 3% 7%, 94% 96%, 16% 40%, 10% 99%, 22% 67%, 83% 41%, 92% 76%);
+	}
+	5% {
+		clip-path: polygon(25% 86%, 59% 45%, 12% 89%, 25% 14%, 1% 82%, 36% 13%, 85% 53%, 59% 8%, 12% 76%, 69% 93%, 3% 49%, 74% 64%, 6% 87%, 36% 94%, 55% 30%, 53% 16%, 26% 39%, 7% 69%, 23% 96%, 83% 38%, 33% 25%, 7% 36%, 28% 41%, 27% 85%, 9% 77%, 64% 47%);
+	}
+	25% {
+		clip-path: polygon(39% 7%, 81% 81%, 97% 19%, 37% 54%, 19% 66%, 98% 57%, 10% 45%, 60% 82%, 10% 96%, 46% 53%, 70% 68%, 89% 24%, 6% 45%, 81% 29%, 68% 54%, 77% 32%, 90% 44%, 28% 36%, 66% 72%, 12% 98%, 83% 10%, 11% 71%, 71% 78%, 11% 93%, 50% 29%, 36% 36%);
+	}
+	50% {
+		clip-path: polygon(18% 34%, 31% 77%, 73% 57%, 69% 50%, 62% 33%, 34% 10%, 3% 66%, 76% 4%, 44% 97%, 43% 50%, 68% 3%, 72% 17%, 94% 57%, 46% 74%, 69% 17%, 56% 24%, 93% 59%, 10% 84%, 93% 76%, 70% 26%, 93% 2%, 84% 83%, 25% 4%, 49% 93%, 14% 64%, 31% 60%);
+	}
+	65% {
+		clip-path: polygon(91% 2%, 50% 60%, 51% 75%, 11% 27%, 96% 3%, 36% 12%, 22% 49%, 21% 75%, 13% 30%, 29% 41%, 2% 76%, 72% 52%, 40% 56%, 19% 38%, 32% 7%, 30% 34%, 3% 27%, 48% 17%, 1% 33%, 16% 41%, 24% 21%, 47% 42%, 16% 4%, 81% 91%, 45% 83%, 21% 21%);
+	}
+	90% {
+		clip-path: polygon(21% 73%, 5% 5%, 41% 55%, 3% 59%, 99% 94%, 66% 86%, 30% 46%, 69% 100%, 81% 83%, 34% 55%, 36% 8%, 2% 5%, 94% 91%, 90% 71%, 38% 92%, 55% 46%, 67% 68%, 59% 98%, 30% 87%, 22% 45%, 59% 76%, 47% 6%, 79% 3%, 20% 61%, 61% 96%, 46% 18%);
+	}
+
+	1%,
+	6%,
+	26%,
+	51%,
+	66%,
+	91% {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+	}
+}
+
+
+
